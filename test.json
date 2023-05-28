@@ -1,0 +1,11 @@
+{
+    "users": 5,
+    "connections": [
+      {"user": "Alice", "friends": ["Bob", "Charlie"]},
+      {"user": "Bob", "friends": ["Alice", "Charlie", "Eva"]},
+      {"user": "Charlie", "friends": ["Alice", "Bob", "Ingrid"]},
+      {"user": "Ingrid", "friends": ["Charlie"]},
+      {"user": "Eva", "friends": ["Bob"]}
+    ]
+  }
+  
