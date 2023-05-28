@@ -19,10 +19,15 @@ for rating in data['ratings']:
     rating_value = rating['rating']
     ratings_matrix[user, movie] = rating_value
 
-# Imprimindo todas as avaliações de todos os usuários para todos os filmes
-for user in range(num_users):
-    user_name = data['users'].get(str(user), "Usuário " + str(user))
-    for movie in range(num_movies):
-        movie_name = data['movies'].get(str(movie), "Filme " + str(movie))
-        rating = ratings_matrix[user, movie]
-        print("Avaliação do", user_name, "para o", movie_name, ":", rating)
+# Imprimindo a lista com títulos de filmes, usuários e notas
+print('---------------------------------------------')
+for movie_id, movie_title in data['movies'].items():
+    print(f'{movie_title: <30}Nota')
+    for user_id, user_name in data['users'].items():
+        rating = ratings_matrix[int(user_id), int(movie_id)]
+        if rating != 0:
+            print(f'{user_name: <30}{rating}')
+        else:
+            print(f'{user_name: <30}Não Assistido')
+    print('---------------------------------------------')
+  # Linha em branco para separar os filmes
