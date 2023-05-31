@@ -8,7 +8,7 @@ a = Analysis(
     ['index.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('test.json', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
