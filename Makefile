@@ -1,7 +1,2 @@
-EXECUTABLE = dist/index
-
-.PHONY: run
-
-run:
-	@./$(EXECUTABLE)
-
+all:
+    python3 index.py
